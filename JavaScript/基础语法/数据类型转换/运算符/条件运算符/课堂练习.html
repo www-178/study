@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+        var d = document.getElementById('d');
+        var nw = confirm('女王请点击');//返回值肯定是布尔值
+        d.oninput = function(){
+        //    nw && d.value == "2019-03-08"?confirm('五折优惠'):confirm('不优惠');
+        var r = (d.value == "2019-03-08");
+        if(nw && r){
+            confirm('五折优惠')
+        }else{
+            confirm('不优惠')
+        }
+    }
+        
+    </script>
+</body>
+</html>
